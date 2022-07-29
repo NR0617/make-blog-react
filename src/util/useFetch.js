@@ -7,7 +7,6 @@ const useFetch = (url) => {
     const [error, setError] = useState(null);
     /* useFetch 안의 중심 로직을 작성해주세요. */
     useEffect(() => {
-        //setTimeout(() => {
         fetch(url)
             .then((res) => {
                 if (!res.ok) {
@@ -24,7 +23,6 @@ const useFetch = (url) => {
                 setIsPending(false);
                 setError(err.message);
             });
-        // }, 1000);
     }, [url]);
     return blog; /* return 문을 작성해주세요. */
 };
